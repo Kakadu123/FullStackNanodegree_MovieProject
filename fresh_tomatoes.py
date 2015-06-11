@@ -3,6 +3,7 @@ import os
 import re
 
 # Styles and scripting for the page
+# custom css for storyline html element added
 main_page_head = '''
 <head>
     <meta charset="utf-8">
@@ -52,6 +53,11 @@ main_page_head = '''
             left: 0;
             top: 0;
             background-color: white;
+        }
+        /* storyline custom css */
+        .storyline {
+            font-size: small;
+            text-align: justify;
         }
     </style>
     <script type="text/javascript" charset="utf-8">
@@ -118,10 +124,13 @@ main_page_content = '''
 '''
 
 # A single movie entry html template
+# custom storyline html element added
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
+    <!-- custom storyline html element -->
+    <p class="storyline">{storyline_detail}</p>
 </div>
 '''
 
@@ -138,7 +147,9 @@ def create_movie_tiles_content(movies):
         content += movie_tile_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            # new StoryLine Detail in Movie tile
+            storyline_detail=movie.storyline
         )
     return content
 
