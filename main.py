@@ -1,11 +1,12 @@
+# required resources imported
 import fresh_tomatoes
 import media
-        
+
+# movie instances are instantiated
 pulpFiction = media.Movie("Pulp Fiction",
                     "The lives of two mob hit men, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
                     "http://ia.media-imdb.com/images/M/MV5BMjE0ODk2NjczOV5BMl5BanBnXkFtZTYwNDQ0NDg4._V1_SY317_CR4,0,214,317_AL_.jpg",
                     "https://www.youtube.com/watch?v=wZBfmBvvotE")
-
 
 matrix = media.Movie("The Matrix",
                     "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
@@ -32,5 +33,7 @@ amadeus = media.Movie("Amadeus",
                     "http://ia.media-imdb.com/images/M/MV5BMTg5NDkwMTk5N15BMl5BanBnXkFtZTYwODg3MDk2._V1_SX214_AL_.jpg",
                     "https://www.youtube.com/watch?v=yIzhAKtEzY0")
 
+# all instances placed in a list
 movies = [pulpFiction , matrix, trainspotting, sweetAndLowdown, vickyCristinaBarcelona, amadeus]
+# page generated
 fresh_tomatoes.open_movies_page(movies)
