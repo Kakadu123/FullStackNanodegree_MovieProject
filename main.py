@@ -48,6 +48,6 @@ amad = media.Movie("Amadeus",
                    "https://www.youtube.com/watch?v=yIzhAKtEzY0")
 
 # all instances placed in a list
-movies = [pulp, matr, train, swee, vick, amad]
+movies = [pulp, matr, trai, swee, vick, amad]
 # page generated
 fresh_tomatoes.open_movies_page(movies)
