@@ -7,3 +7,6 @@ The application is run by clicking on main.py that generates html page. The html
 
 
 I hope you like the selection of movies.
+
+Author: Samuel Gaspar
+Date: June 6, 2015
